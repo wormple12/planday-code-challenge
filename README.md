@@ -11,5 +11,5 @@ You have full creative freedom – so go wild. There’s a catch though! Try you
 Feeling extra fancy? Want to make a lasting impression? Bored and hungry for a challenge? Then go ahead and create your own tile builder using a simple form.
 - Inputs could include label, description, and image.
 
-Please make sure your solution is accessible online.
+Solution can be found deployed at: http://wormple12.planday-code-challenge.surge.sh/
 
