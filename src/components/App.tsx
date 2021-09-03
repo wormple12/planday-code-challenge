@@ -17,7 +17,7 @@ const App: React.FC = () => {
           <header>
             <NavBar tabs={navTabs} />
           </header>
-          <main>
+          <main id="main-container">
             <React.Suspense fallback={<SuspenseLoader />}>
               <MainRoutes />
             </React.Suspense>

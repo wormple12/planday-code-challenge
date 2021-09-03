@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 .input-container {
     position: relative;
@@ -9,12 +9,12 @@
         border: none;
         border-radius: $border-radius;
         width: 100%;
-        margin: 1.1em 0 0 0;
         text-align: left;
         font-family: $font-family;
         background-color: $grey;
         color: black;
-        font-size: 3.5vw;
+        font-size: 16px;
+        margin-bottom: 1.5rem;
 
         &.with-label {
             padding: 1.75em 1.2em 1.2em 15px;
@@ -43,11 +43,11 @@
         top: 7.5px;
         left: 15px;
         font-size: 11px;
-        color: #AAAAAA;
+        color: #aaaaaa;
     }
 
     &.input-disabled input {
-        color: #AAAAAA;
+        color: #aaaaaa;
     }
 
     &.password-bar input {

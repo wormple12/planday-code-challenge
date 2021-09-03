@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 .button {
   display: block;
@@ -13,37 +13,36 @@
   font-weight: 500;
   font-size: 16px;
   &:hover {
-  color: black;
+    color: black;
   }
 }
 
 .button.button-tint {
   background-color: $grey;
-  color:black;
+  color: black;
   &:active {
-      background-color: $colored;
-      color: black;
+    background-color: $colored-dim;
+    color: $white;
   }
 }
 .button.button-alt {
-  background-color: $colored;
-  color: black;
+  background-color: $colored-dim;
+  color: $white;
   &:active {
-      background-color: $grey;
-      color: black;
+    background-color: $colored;
   }
 }
 button.button-default {
   background-color: black !important;
   color: white !important;
   &:active {
-      background-color: $grey !important;
-      color: black !important;
+    background-color: $grey !important;
+    color: black !important;
   }
 }
 .button:disabled,
 .button[disabled] {
   color: black !important;
   background-color: $grey;
-  opacity: 1.0;
+  opacity: 0.5;
 }
