@@ -15,11 +15,11 @@ export const Home: React.FC<Props> = props => {
     }, [setImageList])
 
     return (
-        <div className="content">
+        <section className="content">
             <h1>Browse Images</h1>
             <p className="sectionDesc">Below a grid view of the application's images are displayed.</p>
             <br />
             <Gallery list={imageList} />
-        </div>
+        </section>
     );
 };

@@ -6,7 +6,7 @@ import { SuspenseLoader } from '@Components/utilities';
 export const AddImage: React.FC = props => {
 
     return (
-        <div className="content">
+        <section className="content">
             {/* Needs error boundary for handling fetch errors */}
             <Suspense fallback={<SuspenseLoader />}>
                 <h1>Testing Suspense</h1>
@@ -15,7 +15,7 @@ export const AddImage: React.FC = props => {
                 <h3>Starships:</h3>
                 <h3>Pilot:</h3>
             </Suspense>
-        </div>
+        </section>
     );
 };
 
