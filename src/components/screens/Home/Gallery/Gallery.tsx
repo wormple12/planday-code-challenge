@@ -5,7 +5,7 @@ import { Image } from '@Types/Image';
 import './Gallery.scss';
 import { Button } from '@Components/shared/Button/Button';
 import { SuspenseLoader } from '@Components/utilities';
-import { SuspenseImage } from '@Components/utilities/SuspenseLoader/SuspenseImage';
+// import { SuspenseImage } from '@Components/utilities/SuspenseLoader/SuspenseImage';
 
 type Props = {
     id?: string,
@@ -67,7 +67,7 @@ const GalleryItem: React.FC<{ image: Image, id: string }> = props => {
 
     return (
         <div className="gallery-item">
-            <SuspenseImage id={props.id} src={imagePath} alt={description} />
+            <img id={props.id} src={imagePath} alt={description} />
             <label htmlFor={props.id}>{title}</label>
             <p><i>{description}</i></p>
         </div>

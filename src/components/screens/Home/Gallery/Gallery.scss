@@ -17,11 +17,21 @@
     }
 
     .gallery-view {
-        column-width: 200px;
-        column-count: 5;
+        column-width: auto;
+        column-count: 1;
         column-gap: 1.5rem;
         padding: 1.5rem;
         margin: 0 auto;
+
+        @media only screen and (min-width: 600px) {
+            column-count: 2;
+        }
+        @media only screen and (min-width: 900px) {
+            column-count: 3;
+        }
+        @media only screen and (min-width: 1300px) {
+            column-count: 4;
+        }
 
         .gallery-item {
             margin-bottom: 1.5rem;
