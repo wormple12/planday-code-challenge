@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import { Home, Section01, NoMatch } from "./screens";
+import { Home, AddImage, NoMatch } from "./screens";
 import { NavTab } from '@Components/shared/NavBar/NavBar';
 
 export const MainRoutes: React.FC = props => {
     return (
         <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/add" component={Section01} />
+            <Route exact path="/add" component={AddImage} />
             <Route component={NoMatch} />
         </Switch>
     );

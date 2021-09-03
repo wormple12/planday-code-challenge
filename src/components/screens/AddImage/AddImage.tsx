@@ -1,13 +1,9 @@
 import React, { Suspense } from 'react';
 import { useRecoilValue } from 'recoil';
 
-import { swStarshipState, swPilotState } from '@State/SWState';
 import { SuspenseLoader } from '@Components/utilities';
-import { Table } from '@Components/shared';
 
 export const AddImage: React.FC = props => {
-    const starships = useRecoilValue(swStarshipState);
-    const pilot = useRecoilValue(swPilotState);
 
     return (
         <div className="content">
@@ -17,9 +13,7 @@ export const AddImage: React.FC = props => {
                 <p className="sectionDesc">Here are the results that pass your requirements.</p>
                 <br />
                 <h3>Starships:</h3>
-                <SuspendedGrid resource={starships} />
                 <h3>Pilot:</h3>
-                <SuspendedInfoBox resource={pilot} />
             </Suspense>
         </div>
     );
@@ -30,12 +24,8 @@ const SuspendedGrid: React.FC<{ resource }> = ({ resource }) => {
     starships.forEach(e => e.cost_in_credits = `${parseInt(e.cost_in_credits, 10) / 1000}K`);
 
     return (
-        <Table
-            id="swStarship-table"
-            data={starships}
-            caption="Starships available for purchase that fit your requirements."
-        />
-    )
+        <></>
+    );
 };
 
 const SuspendedInfoBox: React.FC<{ resource }> = ({ resource }) => {
