@@ -2,6 +2,7 @@
   "name": "planday-code-challenge",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://wormple12.github.io/planday-code-challenge/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
