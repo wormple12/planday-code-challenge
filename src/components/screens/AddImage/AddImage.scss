@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+.add-image-section {
+    #add-image-message {
+        opacity: 0;
+        transition: opacity 4s ease;
+        &.active {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+    }
+}

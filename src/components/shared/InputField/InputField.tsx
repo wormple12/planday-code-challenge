@@ -9,7 +9,7 @@ type Props = {
   setValue?: React.Dispatch<React.SetStateAction<string>> | ((value: string) => void);
   hasClearButton?: boolean;
   onClick?: () => void; onFocus?: () => void; onBlur?: () => void;
-  inputAttributes: React.HTMLProps<HTMLInputElement>;
+  inputAttributes?: React.HTMLProps<HTMLInputElement>;
 };
 
 export const InputField: React.FC<Props> = (props) => {
@@ -26,8 +26,8 @@ export const InputField: React.FC<Props> = (props) => {
     },
   };
 
-  const type = props.inputAttributes.type ? props.inputAttributes.type : 'text';
-  const hasClearButton = props.hasClearButton && props.inputAttributes.id && !hasInputFocus;
+  const type = props.inputAttributes?.type ? props.inputAttributes.type : 'text';
+  const hasClearButton = props.hasClearButton && props.inputAttributes?.id && !hasInputFocus;
 
   return (
     <div
@@ -56,7 +56,7 @@ export const InputField: React.FC<Props> = (props) => {
           className="input-clear-button"
           onClick={() => {
             if (props.setValue) props.setValue('');
-            if (props.inputAttributes.id)
+            if (props.inputAttributes?.id)
               document.getElementById(props.inputAttributes.id)?.focus();
           }}
         >
