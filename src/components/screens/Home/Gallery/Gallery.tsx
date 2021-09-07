@@ -21,7 +21,9 @@ export const Gallery: React.FC<Props> = props => {
     const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
-        setTotalPages(Math.ceil(props.data.length / props.dataLimit));
+        const newPageCount = Math.ceil(props.data.length / props.dataLimit);
+        setTotalPages(newPageCount);
+        if (currentPage > newPageCount) setCurrentPage(newPageCount);
     }, [props.data])
 
     useEffect(() => {
